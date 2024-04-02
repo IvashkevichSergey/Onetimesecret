@@ -69,7 +69,7 @@ async def get_secret_from_db(session: AsyncSession,
     Returns
     -------
     bytes
-        A secret from database if secret_key and phrase are corrects.
+        A secret from database if secret_key and phrase are correct.
         Otherwise None"""
     query = select(Secret).where(Secret.secret_key == secret_key)
     result = await session.execute(query)
